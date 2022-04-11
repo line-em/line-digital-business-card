@@ -1,0 +1,77 @@
+:root {
+	/*font*/
+	--serif: "Fraunces", Georgia, serif;
+	--sans: "Rubik", Helvetica, sans-serif;
+
+	/*colors*/
+	--white: rgb(201, 199, 220);
+	--black: rgb(41, 40, 48);
+	--black-background: rgb(31, 30, 36);
+	--black-transparency: rgba(32, 31, 36, 0.5);
+	--grey: rgb(63, 61, 70);
+	--light-grey: rgb(209, 189, 180);
+	--orange: rgb(237, 105, 43);
+	--orange-transparency: rgba(237, 105, 43, 0.865);
+
+	--shadow: var(--small) var(--small) var(--large) var(--black-transparency);
+	--inset: inset var(--medium) var(--medium) var(--huge) var(--black),
+		inset -1rem -1rem var(--huge) var(--black);
+	--gradient: linear-gradient(to bottom, var(--black), var(--grey));
+
+	/*size*/
+	--tiny: 0.3rem;
+	--small: 0.5rem;
+	--medium: 1rem;
+	--large: 1.5rem;
+	--xlarge: 2rem;
+	--xxlarge: 2.5rem;
+	--huge: 3.5rem;
+}
+
+body {
+	font: 400 0.9rem/1.5 var(--serif);
+	color: var(--white);
+	background: var(--gradient);
+	text-align: justify;
+}
+
+p {
+	color: var(--light-grey);
+	font-family: var(--sans);
+	font-size: clamp(0.8rem, 0.9vw, 0.85rem);
+}
+
+h1 {
+	margin-top: var(--small, 0.5rem);
+	font-size: clamp(1.4rem, 2.2vw, 1.7rem);
+	filter: drop-shadow(0 0 0.3rem var(--black-transparency));
+	text-decoration: underline var(--orange) 0.15rem;
+	z-index: 1;
+}
+
+h2 {
+	font-size: clamp(1rem, 1.5vw, 1.1rem);
+	text-transform: lowercase;
+	font-style: italic;
+	font-weight: 400;
+	color: var(--orange);
+}
+
+h3 {
+	font-size: clamp(1rem, 1.2vw, 1.1rem);
+	text-align: left;
+	padding-left: var(--small);
+	/* text-decoration: underline solid 0.15rem var(--orange); */
+}
+
+a:not(.button) {
+	text-decoration: underline 1px var(--orange);
+	color: var(--light-grey);
+	font-size: 0.8rem;
+}
+
+a:not(.button):hover {
+	color: var(--orange);
+	transition: 200ms ease-in-out;
+	transform: translateY(-0.1rem);
+}
